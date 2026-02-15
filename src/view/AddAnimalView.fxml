@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.AddAnimalController"   
+      spacing="10" alignment="CENTER" styleClass="background"
+      prefWidth="550" >
+<VBox alignment="CENTER" spacing="5">
+    <ImageView fx:id="logoView" fitWidth="550" preserveRatio="true">
+    <image>
+      <Image url="@../image/cat_banner.jpg"/>
+    </image>
+  </ImageView>
+    <Label text="Add Animal" styleClass="heading"/>
+</VBox>
+<VBox spacing="10" alignment="CENTER">
+<Separator orientation="HORIZONTAL" />
+<HBox spacing="5" alignment="CENTER">
+  <Label text="Type:" prefWidth="80"/>
+  <ComboBox fx:id="typeCombo" prefWidth="150">
+    <items>
+      <FXCollections fx:factory="observableArrayList">
+        <String fx:value="Cat"/>
+        <String fx:value="Dog"/>
+        <String fx:value="Rabbit"/>
+      </FXCollections>
+    </items>
+  </ComboBox>
+</HBox>
+<HBox spacing="5" alignment="CENTER">
+    <Label text="Name:" prefWidth="80"/>
+    <TextField fx:id="nameField"  />
+  </HBox>
+
+<HBox spacing="5" alignment="CENTER">
+    <Label text="Age:" prefWidth="80"/>
+    <TextField fx:id="ageField"  />
+</HBox>
+</VBox>
+<HBox alignment="CENTER" HBox.hgrow="ALWAYS">
+    <Button text="Add" onAction="#handleAdd" fx:id="addbtn" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+    <Button text="Cancel" onAction="#handleCancel" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+</HBox>
+<stylesheets>
+        <URL value="@style.css" />
+</stylesheets>
+</VBox>

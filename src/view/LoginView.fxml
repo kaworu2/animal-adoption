@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.LoginController"
+      alignment="CENTER"
+      spacing="10"
+      styleClass="background"
+      prefWidth="550.0">
+
+ 
+  <VBox  alignment="CENTER" spacing="5">
+    <ImageView fx:id="logoView" fitWidth="550" preserveRatio="true">
+    <image>
+      <Image url="@../image/cat_banner.jpg"/>
+    </image>
+  </ImageView>
+    <Label text="Login" styleClass="heading"/>
+  </VBox>
+
+ 
+  <VBox  spacing="10" alignment="CENTER">
+    <Separator orientation="HORIZONTAL" />
+    <HBox spacing="10" alignment="CENTER">
+    <Label text="Username:"/>
+    <TextField fx:id="usernameField"  />
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+    <Label text="Email:"/>
+    <TextField fx:id="emailField"/>
+    </HBox>
+  </VBox>
+  <VBox spacing="10" alignment="CENTER" >
+  <Separator orientation="HORIZONTAL" />
+    <HBox spacing="10" alignment="CENTER">
+    <Label text="Manager ID:"/>
+    <TextField fx:id="managerIdField"  />
+    </HBox>
+  </VBox>
+
+  <Separator orientation="HORIZONTAL" />
+  <HBox  alignment="CENTER"  HBox.hgrow="ALWAYS">
+    <Button fx:id="loginButton" text="Login"   onAction="#handleLogin" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+    <Button text="Exit"  onAction="#handleExit"  maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+  </HBox>
+  <stylesheets>
+        <URL value="@style.css" />
+  </stylesheets>
+</VBox>

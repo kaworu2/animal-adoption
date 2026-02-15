@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" fx:controller="controller.UserListController" styleClass="background" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1">
+  <VBox alignment="CENTER" spacing="5">
+      <ImageView fx:id="logoView" fitWidth="550" preserveRatio="true">
+      <image>
+        <Image url="@../image/cat_banner.jpg"/>
+      </image>
+    </ImageView>
+      <Label text="User List" styleClass="heading"/>
+    </VBox>
+  <VBox alignment="CENTER">
+  <Separator orientation="HORIZONTAL" />
+  <ListView fx:id="userListView"  styleClass="full-width-table"/>
+  <Button fx:id="closebtn" text="Close" onAction="#handleClose" alignment="CENTER"  HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+
+  </VBox>
+  <stylesheets>
+          <URL value="@style.css" />
+  </stylesheets>
+</VBox>
